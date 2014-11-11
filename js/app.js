@@ -1,16 +1,19 @@
 /* 
     app.js
     Angular application for the address book challenge
-
-    Add code here to create a new Angular application and controller.
-    The array of employee objects is already in a global variable named 'pawneeEmployees'
 */
 
+"use strict";
+
+//Creates Angular module named AddressBook
 angular.module('AddressBook', [])
+	// Controller for the AddressBook module
 	.controller('AddressController', function($scope) {
-		//intialize variables with list of people so that it'll be accessed in the view
+		//intializes array of employees in the Address Book to be viewable by the user
 		$scope.employees = pawneeEmployees;
+		//default to sort by last names
 		$scope.sortCol = 'lastName';
+
 		$scope.sortBy = function(sortCol) {
             $scope.sortCol = sortCol;
         };
