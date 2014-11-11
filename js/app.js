@@ -8,20 +8,10 @@
 
 angular.module('AddressBook', [])
 	.controller('AddressController', function($scope) {
-		//intialize variables with list of movies so that it'll be accessed in the view
+		//intialize variables with list of people so that it'll be accessed in the view
 		$scope.employees = pawneeEmployees;
-		$scope.filteredEmployees = pawneeEmployees;
-
 		$scope.sortCol = 'lastName';
-		$scope.employeeSearch = undefined;
-
 		$scope.sortBy = function(sortCol) {
             $scope.sortCol = sortCol;
         };
-
-        $scope.isSortedBy = function(colName) {
-            return $scope.sortCol == colName;
-
-		};
-
 	});
